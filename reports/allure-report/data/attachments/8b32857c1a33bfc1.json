@@ -1,0 +1,15 @@
+{
+  "ui": {
+    "name": "Test.allTheThings() T-Shirt (Red)",
+    "description": "This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.",
+    "price": "15.99",
+    "image_url": "/static/media/red-tatt-1200x1500.30dadef4.jpg"
+  },
+  "db": {
+    "id": 6,
+    "name": "Test.allTheThings() T-Shirt (Red)",
+    "description": "This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.",
+    "price": "15.99",
+    "image_url": "red-tatt-1200x1500.30dadef4.jpg"
+  }
+}

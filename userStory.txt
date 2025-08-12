@@ -1,0 +1,92 @@
+
+
+SauceDemo Product Data Extraction & Validation – Requirements Document
+
+1. General Information
+Base URL: https://www.saucedemo.com/
+
+Purpose: Demonstrate automated extraction of product data from the SauceDemo site, validate it against a local MySQL database, and generate detailed comparison reports.
+
+Modules Covered:
+- UI Functional Flows (Login, Product listing, details extraction, cart)
+- Database (Local MySQL)
+
+2. Login Page (SauceDemo)
+URL: https://www.saucedemo.com/
+Description: Requires login to access product catalog.
+
+Main Elements:
+- Username field
+- Password field
+- Login button
+
+3. Core UI Functional Requirements
+
+3.1 Product Listing & Details Extraction
+- Extract product data from the inventory page after login.
+- Capture:
+	- Product name
+	- Price
+	- Description
+	- Image URL
+
+3.2 Add to Cart
+- Add a product to the cart and validate cart contents (product name, price, quantity).
+
+4. Database Requirements (Local MySQL)
+Purpose: Maintain a local MySQL database that mirrors the SauceDemo product catalog for E2E validation.
+The database will be updated in sync with UI test executions and used for data verification.
+
+Database Name: saucedemo_demo
+
+Key Table:
+products
+Fields: id, name, price, description, image_url, created_at
+Purpose: Store product list extracted from the UI and used for validation.
+
+Database Operations in Scope:
+- Insert: After extracting product data from the UI, insert into products table.
+- Update: When product details change in UI, update local DB accordingly.
+- Delete: (Optional) Remove products no longer present in UI.
+- Read: Query products table to confirm data matches UI product list.
+
+Database Validation Flow:
+- UI → DB Sync:
+	- Extract product data from SauceDemo UI.
+	- Insert/update in local DB using MySQL MCP.
+	- Validate DB data against UI values.
+
+DB Assertions:
+- Ensure all mandatory fields are present and correct.
+- Compare record counts between UI and DB tables.
+- Validate product details (name, price, description, etc.) match exactly.
+
+MySQL MCP Server Capabilities to Use:
+- List available tables as resources
+- Read table contents
+- Execute SQL queries with error handling
+- Secure database access through environment variables
+- Comprehensive logging
+- Insert: After extracting product data from the UI, insert into products table.
+- Update: When product details change in UI, update local DB accordingly.
+- Delete: (Optional) Remove products no longer present in UI.
+- Read: Query products table to confirm data matches UI product list.
+
+Database Validation Flow:
+- UI → DB Sync:
+	- Extract product data from OpenCart UI.
+	- Insert/update in local DB using MySQL MCP.
+	- Validate DB data against UI values.
+
+DB Assertions:
+- Ensure all mandatory fields are present and correct.
+- Compare record counts between UI and DB tables.
+- Validate product details (name, price, brand, etc.) match exactly.
+
+MySQL MCP Server Capabilities to Use:
+- List available tables as resources
+- Read table contents
+- Execute SQL queries with error handling
+- Secure database access through environment variables
+- Comprehensive logging
+

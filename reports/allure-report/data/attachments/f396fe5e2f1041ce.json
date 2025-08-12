@@ -1,0 +1,15 @@
+{
+  "ui": {
+    "name": "Sauce Labs Onesie",
+    "description": "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.",
+    "price": "7.99",
+    "image_url": "/static/media/red-onesie-1200x1500.2ec615b2.jpg"
+  },
+  "db": {
+    "id": 5,
+    "name": "Sauce Labs Onesie",
+    "description": "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.",
+    "price": "7.99",
+    "image_url": "red-onesie-1200x1500.2ec615b2.jpg"
+  }
+}

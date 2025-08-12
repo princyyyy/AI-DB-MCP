@@ -1,0 +1,57 @@
+[
+  {
+    "testCase": "TC01: Verify all products are displayed after login",
+    "matched": true,
+    "details": "All 6 products in the UI matched the DB records by name, description, and price."
+  },
+  {
+    "testCase": "TC02: Verify product details match DB for Sauce Labs Backpack",
+    "matched": true,
+    "details": "UI details for 'Sauce Labs Backpack' matched DB record exactly."
+  },
+  {
+    "testCase": "TC03: Verify product details match DB for Sauce Labs Bike Light",
+    "matched": true,
+    "details": "UI details for 'Sauce Labs Bike Light' matched DB record exactly."
+  },
+  {
+    "testCase": "TC04: Verify product details match DB for Sauce Labs Bolt T-Shirt",
+    "matched": true,
+    "details": "UI details for 'Sauce Labs Bolt T-Shirt' matched DB record exactly."
+  },
+  {
+    "testCase": "TC05: Verify product details match DB for Sauce Labs Fleece Jacket",
+    "matched": true,
+    "details": "UI details for 'Sauce Labs Fleece Jacket' matched DB record exactly."
+  },
+  {
+    "testCase": "TC06: Verify product details match DB for Sauce Labs Onesie",
+    "matched": true,
+    "details": "UI details for 'Sauce Labs Onesie' matched DB record exactly."
+  },
+  {
+    "testCase": "TC07: Verify product details match DB for Test.allTheThings() T-Shirt (Red)",
+    "matched": true,
+    "details": "UI details for 'Test.allTheThings() T-Shirt (Red)' matched DB record exactly."
+  },
+  {
+    "testCase": "TC08: Verify adding 'Sauce Labs Backpack' to cart reflects correct details",
+    "matched": true,
+    "details": "Cart details for 'Sauce Labs Backpack' matched DB record exactly."
+  },
+  {
+    "testCase": "TC09: Verify adding 'Sauce Labs Bike Light' to cart reflects correct details",
+    "matched": true,
+    "details": "Cart details for 'Sauce Labs Bike Light' matched DB record exactly."
+  },
+  {
+    "testCase": "TC10: Verify all product prices in UI match DB",
+    "matched": true,
+    "details": "All product prices in UI matched DB records."
+  },
+  {
+    "testCase": "TC11: Verify product count in UI matches DB",
+    "matched": true,
+    "details": "UI product count matched DB product count."
+  }
+]

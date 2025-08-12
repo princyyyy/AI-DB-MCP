@@ -1,0 +1,32 @@
+Test Case ID,Title,Precondition,Test Steps,Expected Result,DB Verification,UI↔DB Cross-Check,Allure Artifacts
+TC01,Verify all products are displayed after login,Products table is initialized with 6 products,1. Login to SauceDemo
+2. Navigate to product listing
+3. Extract all product data from UI,All 6 products from DB are displayed in UI,Query DB for all products and compare with UI,UI and DB product lists match exactly,Screenshot, DB query result, Allure log
+TC02,Verify product details match DB for 'Sauce Labs Backpack',Products table is initialized,1. Login
+2. Click on 'Sauce Labs Backpack'
+3. Extract product details,UI details match DB for 'Sauce Labs Backpack',Query DB for 'Sauce Labs Backpack',UI and DB details match,Screenshot, DB query, Allure log
+TC03,Verify product details match DB for 'Sauce Labs Bike Light',Products table is initialized,1. Login
+2. Click on 'Sauce Labs Bike Light'
+3. Extract product details,UI details match DB for 'Sauce Labs Bike Light',Query DB for 'Sauce Labs Bike Light',UI and DB details match,Screenshot, DB query, Allure log
+TC04,Verify product details match DB for 'Sauce Labs Bolt T-Shirt',Products table is initialized,1. Login
+2. Click on 'Sauce Labs Bolt T-Shirt'
+3. Extract product details,UI details match DB for 'Sauce Labs Bolt T-Shirt',Query DB for 'Sauce Labs Bolt T-Shirt',UI and DB details match,Screenshot, DB query, Allure log
+TC05,Verify product details match DB for 'Sauce Labs Fleece Jacket',Products table is initialized,1. Login
+2. Click on 'Sauce Labs Fleece Jacket'
+3. Extract product details,UI details match DB for 'Sauce Labs Fleece Jacket',Query DB for 'Sauce Labs Fleece Jacket',UI and DB details match,Screenshot, DB query, Allure log
+TC06,Verify product details match DB for 'Sauce Labs Onesie',Products table is initialized,1. Login
+2. Click on 'Sauce Labs Onesie'
+3. Extract product details,UI details match DB for 'Sauce Labs Onesie',Query DB for 'Sauce Labs Onesie',UI and DB details match,Screenshot, DB query, Allure log
+TC07,Verify product details match DB for 'Test.allTheThings() T-Shirt (Red)',Products table is initialized,1. Login
+2. Click on 'Test.allTheThings() T-Shirt (Red)'
+3. Extract product details,UI details match DB for 'Test.allTheThings() T-Shirt (Red)',Query DB for 'Test.allTheThings() T-Shirt (Red)',UI and DB details match,Screenshot, DB query, Allure log
+TC08,Verify adding 'Sauce Labs Backpack' to cart reflects correct details,Products table is initialized,1. Login
+2. Add 'Sauce Labs Backpack' to cart
+3. Go to cart and extract details,Cart details match DB for 'Sauce Labs Backpack',Query DB for 'Sauce Labs Backpack',Cart and DB details match,Screenshot, DB query, Allure log
+TC09,Verify adding 'Sauce Labs Bike Light' to cart reflects correct details,Products table is initialized,1. Login
+2. Add 'Sauce Labs Bike Light' to cart
+3. Go to cart and extract details,Cart details match DB for 'Sauce Labs Bike Light',Query DB for 'Sauce Labs Bike Light',Cart and DB details match,Screenshot, DB query, Allure log
+TC10,Verify all product prices in UI match DB,Products table is initialized,1. Login
+2. Extract all product prices from UI,All prices match DB,Query DB for all products,UI and DB prices match,Screenshot, DB query, Allure log
+TC11,Verify product count in UI matches DB,Products table is initialized,1. Login
+2. Count products in UI,UI product count matches DB,Query DB for product count,UI and DB counts match,Screenshot, DB query, Allure log

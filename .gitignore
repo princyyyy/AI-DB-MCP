@@ -1,0 +1,20 @@
+# Node
+node_modules/
+
+# Playwright
+playwright-report/
+
+# Allure
+allure-results/
+
+# VSCode
+.vscode/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Reports (optional, if you don't want to push generated HTML)
+# reports/allure-report/

@@ -1,0 +1,47 @@
+import { test, expect } from '@playwright/test';
+import { LoginPage } from '../pages/LoginPage';
+import { ProductsPage } from '../pages/ProductsPage';
+import * as db from '../utils/dbUtils';
+
+test.describe('SauceDemo Product Details UI↔DB Validation', () => {
+  const productNames = [
+    'Sauce Labs Backpack',
+    'Sauce Labs Bike Light',
+    'Sauce Labs Bolt T-Shirt',
+    'Sauce Labs Fleece Jacket',
+    'Sauce Labs Onesie',
+    'Test.allTheThings() T-Shirt (Red)'
+  ];
+
+  for (const name of productNames) {
+    test(`Verify product details match DB for ${name}`, async ({ page }) => {
+      const login = new LoginPage(page);
+      const products = new ProductsPage(page);
+      await login.goto();
+      await login.login('standard_user', 'secret_sauce');
+      await products.openProduct(name);
+      const uiDetails = await products.getProductDetails();
+      await test.info().attach('ui-screenshot', {
+        body: await page.screenshot({ fullPage: true }),
+        contentType: 'image/png',
+      });
+      const dbQuery = `SELECT * FROM products WHERE name = '${name.replace(/'/g, "''")}'`;
+      const dbDetails = await db.getProductByName(name);
+      await test.info().attach('db-query', {
+        body: Buffer.from(dbQuery, 'utf-8'),
+        contentType: 'text/plain',
+      });
+      await test.info().attach('db-result.json', {
+        body: Buffer.from(JSON.stringify(dbDetails, null, 2), 'utf-8'),
+        contentType: 'application/json',
+      });
+      await test.info().attach('ui-db-matched.json', {
+        body: Buffer.from(JSON.stringify({ ui: uiDetails, db: dbDetails }, null, 2), 'utf-8'),
+        contentType: 'application/json',
+      });
+      expect(uiDetails.name).toBe(dbDetails.name);
+      expect(uiDetails.description).toBe(dbDetails.description);
+      expect(uiDetails.price).toBe(dbDetails.price.toString());
+    });
+  }
+});
