@@ -1,5 +1,10 @@
 # SauceDemo Product Data Extraction & Validation Automation
 
+> **Important Notes:**
+> - **propmt.md:** The automation prompt and instructions to trigger the full workflow.
+> - **userStory.txt:** All functional requirements and acceptance criteria for the project.
+> - **db/**: Local database initialization scripts and helpers for validating product data.
+
 ## Overview
 
 This project automates the extraction of product data from [SauceDemo](https://www.saucedemo.com/) and validates it against a local MySQL database. It uses Playwright for UI automation, MySQL for DB validation, and Allure for reporting.
@@ -74,16 +79,6 @@ Allure attaches screenshots and validation artifacts for every test step. To vie
    - **db-result.json**: The DB query result
    - **ui-db-matched.json**: UI and DB data comparison
 
-### Example Allure Report UI
-
-**Allure Overview:**
-![Allure Overview](docs/allure-overview.png)
-
-**Allure Suite Details with Attachments:**
-![Allure Suite Details](docs/allure-suite-details.png)
-
-> _Samples: Allure report UI showing test results, suite details, and validation attachments._
-
 ## Artifacts in Allure
 
 - UI screenshots for each validation (see Attachments in Allure)
@@ -100,7 +95,3 @@ Allure attaches screenshots and validation artifacts for every test step. To vie
 
 - Automation: Playwright, MySQL, Allure
 - Prompt/Framework: Senior QA Automation Engineer
-
----
-
-For any issues, please raise an issue or contact the maintainer.
